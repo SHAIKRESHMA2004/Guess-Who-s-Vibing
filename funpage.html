@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Having Fun?</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="funPage" id="funPage">
+  <div class="fun-header" style="font-family:italic;">
+    <h1>Having fun?😆 Let's end this with the last beat!🎵</h1>
+  </div>
+
+  <div class="fun-action">
+    <button id="funBtn" class="ok-btn">charan imitating others</button>
+  </div>
+
+  <div id="videoWrapFun" style="display:none; margin-top:10px; text-align:center;">
+    <video id="funVideo" width="500" controls></video>
+  </div>
+
+  <div id="finalDisclaimer" style="font-family:italic; margin-top:14px; font-size:30px; text-align:center;">
+    This app is made purely for fun and entertainment! 😄
+No offense is intended, and nothing here should be taken personally. ❤️
+
+
+By Shaik Reshma with lots of love ❤️
+  </div>
+</div>
+
+<script>
+document.getElementById('funBtn').addEventListener('click', () => {
+  document.getElementById('funBtn').style.display='none';
+  const videoWrap = document.getElementById('videoWrapFun');
+  const video = document.getElementById('funVideo');
+  videoWrap.style.display='block';
+  video.src='vedios/smile.mp4';
+  video.play();
+  video.onended = ()=> {
+    document.getElementById('finalDisclaimer').style.display='block';
+  };
+});
+</script>
+</body>
+</html>

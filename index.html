@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Guess Who's Vibing!</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app" id="mainPage">
+  <div class="header">
+    <h1>Guess Who's Vibing! 🎶</H1>
+    <div class="score" id="scoreBox">Score: 0 / 0</div>
+  </div>
+
+  <div class="grid" id="grid">
+    <!-- Cards will be inserted by JS -->
+  </div>
+</div>
+
+<!-- Result panel -->
+<div class="result" id="resultPanel" aria-live="polite">
+  <div id="scoreText"></div>
+  <div id="finalAction">
+    <button class="ok-btn" id="okFinal">Next → Fun Page 🎉</button>
+  </div>
+</div>
+
+<!-- Confetti canvas -->
+<canvas id="confetti"></canvas>
+
+<script src="script.js"></script>
+<script src="confetti.js"></script>
+</body>
+</html>
